@@ -9,6 +9,7 @@ module.exports = {
     coveragePathIgnorePatterns: [
         "index.ts"
     ],
+    "coverageReporters": ["json", "html"],
     coverageThreshold: {
         global: {
             lines: 80,
