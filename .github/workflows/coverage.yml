@@ -15,3 +15,10 @@ jobs:
 
             - name: Run test coverage
               run: npm test
+
+            - name: Coverage report
+              uses: eleboys/test-coverage-report-action@v1.0.2
+              id: report
+              with:
+                path: coverage/coverage-final.json
+                title: Karma Test Coverage
