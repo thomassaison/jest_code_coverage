@@ -1,5 +1,7 @@
+import DotEnv from "./classes/dotenv.class";
+
 const main = async () => {
-    console.log("Hello World!");
+    let config = new DotEnv();
 };
 
 main();
