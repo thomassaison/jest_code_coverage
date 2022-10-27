@@ -10,9 +10,9 @@ module.exports = {
         "index.ts"
     ],
     "coverageReporters": ["json", "html"],
-    coverageThreshold: {
-        global: {
-            lines: 80,
-        },
-    },
+    // coverageThreshold: {
+    //     global: {
+    //         lines: 80,
+    //     },
+    // },
 };
