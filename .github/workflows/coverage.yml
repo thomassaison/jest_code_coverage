@@ -15,4 +15,5 @@ jobs:
                   output: report-markdown
             - uses: marocchino/sticky-pull-request-comment@v2
               with:
+                  test-script: npm test
                   message: ${{ steps.coverage.outputs.report }}
