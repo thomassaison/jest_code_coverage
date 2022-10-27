@@ -9,9 +9,9 @@ module.exports = {
     coveragePathIgnorePatterns: [
         "index.ts"
     ],
-    coverageThreshold: {
-        global: {
-            lines: 90
-        }
-    }
+    // coverageThreshold: {
+    //     global: {
+    //         lines: 90
+    //     }
+    // }
 };
