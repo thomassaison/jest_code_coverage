@@ -1,4 +1,4 @@
-name: "coverage"
+name: 'coverage'
 on:
     pull_request:
         branches:
@@ -9,16 +9,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-
-            - name: Install dependencies
-              run: npm install
-
-            - name: Run test coverage
-              run: npm test
-
-            - name: Coverage report
-              uses: eleboys/test-coverage-report-action@v1.0.2
-              id: report
+            - uses: ArtiomTr/jest-coverage-report-action@v2
+              id: coverage
               with:
-                path: coverage/coverage-final.json
-                title: Karma Test Coverage
+                  output: report-markdown
+            - uses: marocchino/sticky-pull-request-comment@v2
+              with:
+                  message: ${{ steps.coverage.outputs.report }}
